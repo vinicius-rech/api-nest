@@ -32,4 +32,6 @@ Objetivo
    ```sh
     $ npm run start:dev
     ```
+- Para documentação:
+   - [Documentação](http://localhost:3000/api)
 ---
