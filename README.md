@@ -28,6 +28,6 @@ Controle de tarefas (TodoList).
     ```
 - Para watch dev:
     ```sh
-    $ # npm run start:dev
+    $ npm run start:dev
     ```
 ---
