@@ -1,12 +1,8 @@
 # :computer: Projeto
 
-Descrição
+API Utilizada para alimentar o projeto [react-typescript](https://github.com/vinicius-rech/react-typescript/)
 
 ---
-
-## :dart: Objetivo do projeto
-
-Objetivo
 
 ## :rocket: Tecnologias utilizadas
 
