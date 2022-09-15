@@ -4,7 +4,7 @@ generator client {
 
 datasource db {
   provider = "sqlite"
-  url      = "./main_database.db"
+  url      = env("DATABASE_URL")
 }
 
 model Task {
