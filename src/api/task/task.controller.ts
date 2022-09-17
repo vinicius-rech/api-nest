@@ -20,11 +20,9 @@ export class TaskController {
     async createTask(
         @Body() taskData: TaskProps,
     ): Promise<TaskModel> {
-        const {title, description, status} = taskData;
+        const {description} = taskData;
         return this.taskService.createTask({
-            title,
-            description,
-            status
+            description
         });
     }
 
@@ -43,6 +41,9 @@ export class TaskController {
                     gt: 0
                 }
             },
+            orderBy: {
+                id: "desc"
+            }
         });
     }
 
