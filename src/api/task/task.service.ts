@@ -7,7 +7,7 @@ export class TaskService {
     constructor(
         private prisma: PrismaService,
     ) {
-    }
+    }''
     async blogPost(
         postWhereuniqueInput: Prisma.TaskWhereUniqueInput,
     ): Promise<Task | null> {

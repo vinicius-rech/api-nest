@@ -1,3 +1,7 @@
+export type TaskStatusProps = {
+    status: "todo" | "completed"
+}
+
 export type TaskProps = {
-    title: string; status: string; description: string;
+    title: string; status: TaskStatusProps; description: string;
 }
