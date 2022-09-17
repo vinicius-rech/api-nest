@@ -34,13 +34,17 @@ export class TaskController {
     //     return this.taskService.blogPost({id: Number(id)});
     // }
 
-    // @ApiTags('blog-posts')
-    // @Get('blog-posts/feed')
-    // async getPublishedPosts(): Promise<PostModel[]> {
-    //     return this.taskService.blogPosts({
-    //         where: {published: true},
-    //     });
-    // }
+    @ApiTags('task')
+    @Get('task/all')
+    async get(): Promise<TaskModel[]> {
+        return this.taskService.listAll({
+            where: {
+                id: {
+                    gt: 0
+                }
+            },
+        });
+    }
 
     // @ApiTags('blog-posts')
     // @Get('blog-posts/filtered-posts/:searchString')

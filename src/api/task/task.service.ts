@@ -16,7 +16,7 @@ export class TaskService {
         })
     }
 
-    async blogPosts(params: {
+    async listAll(params: {
         skip?: number;
         take?: number;
         cursor?: Prisma.TaskWhereUniqueInput;
