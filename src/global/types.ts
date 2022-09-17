@@ -3,5 +3,5 @@ export type TaskStatusProps = {
 }
 
 export type TaskProps = {
-    title: string; status: TaskStatusProps; description: string;
+    title?: string; status?: TaskStatusProps; description?: string;
 }
