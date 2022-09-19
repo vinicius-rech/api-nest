@@ -16,16 +16,16 @@ export class TaskController {
   constructor(private readonly taskService: TaskService) {
   }
 
-  // @ApiTags('task')
-  // @Post('task/new')
-  // async createTask(
-  //     @Body() taskData: TaskProps,
-  // ): Promise<TaskModel> {
-  //     const {description} = taskData;
-  //     return this.taskService.createTask({
-  //         description
-  //     });
-  // }
+  @ApiTags('task')
+  @Post('task/new')
+  async createTask(
+      @Body() taskData: TaskModel,
+  ): Promise<TaskModel> {
+      const {description} = taskData;
+      return this.taskService.createTask({
+          description
+      });
+  }
 
   // @ApiTags('blog-post')
   // @Get('blog-post/:id')
