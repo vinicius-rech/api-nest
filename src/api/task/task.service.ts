@@ -48,7 +48,7 @@ export class TaskService {
         })
     }
 
-    async deleteBlogPost(where: Prisma.TaskWhereUniqueInput): Promise<Task> {
+    async deleteTask(where: Prisma.TaskWhereUniqueInput): Promise<Task> {
         return this.prisma.task.delete({
             where
         })
