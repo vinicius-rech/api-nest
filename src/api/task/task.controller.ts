@@ -10,6 +10,7 @@ import {
 import { Task as TaskModel } from "@prisma/client";
 import { ApiTags } from "@nestjs/swagger";
 import { TaskService } from "./task.service";
+import { TaskProps } from "../../global/types";
 
 @Controller()
 export class TaskController {
@@ -81,4 +82,20 @@ export class TaskController {
   async deleteTask(@Param('id') id: string): Promise<TaskModel> {
       return this.taskService.deleteTask({id: Number(id)});
   }
+  // @ApiTags('task')
+  // @Post('task/mass-delete')
+  // async massDelete(@Body() ): Promise<TaskModel> {
+  //     return this.taskService.deleteTask({id: Number(id)});
+  // }
+
+  @ApiTags('task')
+  @Post('task/mass-delete')
+  async massDelete(
+    @Body() taskData: [],
+  ) {
+    return taskData.forEach((task: TaskProps) => {
+      return this.taskService.deleteTask({id: task.id})
+    })
+  }
+
 }

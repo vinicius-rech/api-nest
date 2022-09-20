@@ -6,15 +6,7 @@ import {PrismaService} from "../../services/prisma.service";
 export class TaskService {
     constructor(
         private prisma: PrismaService,
-    ) {
-    }''
-    async blogPost(
-        postWhereuniqueInput: Prisma.TaskWhereUniqueInput,
-    ): Promise<Task | null> {
-        return this.prisma.task.findUnique({
-            where: postWhereuniqueInput
-        })
-    }
+    ){}
 
     async listAll(params: {
         skip?: number;
@@ -48,9 +40,11 @@ export class TaskService {
         })
     }
 
-    async deleteTask(where: Prisma.TaskWhereUniqueInput): Promise<Task> {
+    async deleteTask(task: Prisma.TaskWhereUniqueInput): Promise<Task> {
         return this.prisma.task.delete({
-            where
+            where: {
+                id: task.id
+            }
         })
     }
 }
