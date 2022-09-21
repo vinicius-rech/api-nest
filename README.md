@@ -2,7 +2,7 @@
 
 Descrição
 
-    Aplicativo responsivo para o controle de tarefas pessoal.
+    API para aplicativo responsivo para o controle de tarefas pessoal.
 ---
 
 ## :dart: Objetivo do projeto
@@ -25,6 +25,14 @@ Controle de tarefas (TodoList).
 - Instale as dependências do package.json
     ```sh
     $ npm install
+    ```
+- Execute as migrations
+    ```sh
+    $ prisma migrate dev
+    ```
+- Gerar o client
+    ```sh
+    $ prisma generate
     ```
 - Para watch dev:
     ```sh
